@@ -5,7 +5,7 @@ const { Client } = pg;
 const config = dotenv.config()
 console.log('config>>>>>>', config)
 const client = new Client({
-    host: Number(config.parsed.DB_HOST),
+    host: config.parsed.DB_HOST,
     user: config.parsed.DB_USERNAME,
     database: config.parsed.DB_DATABASE,
     password: config.parsed.DB_PASSWORD,
