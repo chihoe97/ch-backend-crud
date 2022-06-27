@@ -3,7 +3,6 @@ import dotenv from 'dotenv'
 
 const { Client } = pg;
 const config = dotenv.config()
-console.log('config>>>>>>', config)
 const client = new Client({
     host: config.parsed.DB_HOST,
     user: config.parsed.DB_USERNAME,
@@ -11,7 +10,6 @@ const client = new Client({
     password: config.parsed.DB_PASSWORD,
 });
 
-console.log('client>>>>>>', client)
 const execute = async (query) => {
     try {
         await client.connect();     // gets connection
