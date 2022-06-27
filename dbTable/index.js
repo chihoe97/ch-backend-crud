@@ -10,6 +10,8 @@ const client = new Client({
     database: config.parsed.DB_DATABASE,
     password: config.parsed.DB_PASSWORD,
 });
+
+console.log('client>>>>>>', client)
 const execute = async (query) => {
     try {
         await client.connect();     // gets connection
