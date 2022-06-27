@@ -8,7 +8,7 @@ import dbTable from './dbTable/index.js'
 import routes from './routes/index.js';
 
 const host = '0.0.0.0';
-const port = config.service.port || 3000;
+const port = process.env.PORT || 3000;
 // Set up the express app
 const app = express();
 
@@ -25,7 +25,7 @@ app.get('*', (req, res) => res.status(200).send({
 
 // Server listen to port
 app.listen(port, host, function(){
-  console.log('Listening on port ' + port);
+  console.log('Listening on port/host ' + port + host);
 });
 
 export default app;
