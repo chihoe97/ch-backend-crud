@@ -8,7 +8,6 @@ const client = new Client({
     user: config.parsed.DB_USERNAME,
     database: config.parsed.DB_DATABASE,
     password: config.parsed.DB_PASSWORD,
-    port: Number(config.parsed.DB_PORT)
 });
 const execute = async (query) => {
     try {
