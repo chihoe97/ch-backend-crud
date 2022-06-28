@@ -2,13 +2,13 @@
 
 import { Router } from 'express';
 // Import routes
-import catFacts from './catfacts.js';
+import student from './students.js';
 
 const router = Router({
   caseSensitive: true
 })
 
 // Use imported routes in router
-router.use('/catFacts', catFacts);
+router.use('/api', student);
 
 export default router;
